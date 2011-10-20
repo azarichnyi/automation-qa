@@ -1,0 +1,37 @@
+sfGuardUser:
+  guser1:
+    id: 1
+    first_name: John1
+    last_name: Doe1
+    email_address: john1@doe.com
+    username: johndoe1
+    algorithm: md5
+    salt: cbeba1a2505aaba844a9bdce346a8a0b
+    password: 123456
+  guser2:
+    id: 2
+    first_name: John2
+    last_name: Doe2
+    email_address: john2@doe.com
+    username: johndoe2
+    algorithm: md5
+    salt: cbeba1a2505aaba844a9bdce346a8a0b
+    password: 123456
+  guser3:
+    id: 3
+    first_name: John3
+    last_name: Doe3
+    email_address: john3@doe.com
+    username: johndoe3
+    algorithm: md5
+    salt: cbeba1a2505aaba844a9bdce346a8a0b
+    password: 123456
+  guser4:
+    id: 4
+    first_name: John4
+    last_name: Doe4
+    email_address: john4@doe.com
+    username: johndoe4
+    algorithm: md5
+    salt: cbeba1a2505aaba844a9bdce346a8a0b
+    password: 123456

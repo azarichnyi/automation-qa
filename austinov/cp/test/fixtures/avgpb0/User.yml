@@ -1,0 +1,42 @@
+User:
+  User1:
+    sf_guard_user_id: 1
+    token: testing1
+    painbucks: 0
+    painbucks_dd: 0
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_contrib: 0
+    painbucks_avg_coef: 1.0
+    cash_amount: 0
+  User2:
+    sf_guard_user_id: 2
+    token: testing2
+    painbucks: 0
+    painbucks_dd: 0
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_contrib: 0
+    painbucks_avg_coef: 1.0
+    cash_amount: 0
+  User3:
+    sf_guard_user_id: 3
+    token: testing3
+    painbucks: 0
+    painbucks_dd: 0
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_contrib: 0
+    painbucks_avg_coef: 1.0
+    cash_amount: 0
+  User4:
+    sf_guard_user_id: 4
+    token: testing4
+    painbucks: 0
+    painbucks_dd: 0
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_contrib: 0
+    painbucks_avg_coef: 1.0
+    cash_amount: 0
+

@@ -1,0 +1,27 @@
+sfGuardUser:
+  GuardUser1:
+    id: 1
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny@cogniance.com'
+    username: 'bestic'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+  GuardUser2:
+    id: 2
+    first_name: 'Test'
+    last_name: 'Insert'
+    email_address: 'abestcenny2@cogniance.com'
+    username: 'bestic2'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>    
+    
+    
+User:
+  User1:
+    GuardUser: GuardUser1
+  User2:
+    GuardUser: GuardUser2
+    
+  
+  

@@ -1,0 +1,7 @@
+AverageRoad:
+  road0:
+    road_osm_id: 86380111
+    city_osm_id: 26150422
+    speed: 30
+    deviation: 5
+    direction: 2

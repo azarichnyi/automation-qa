@@ -1,0 +1,82 @@
+<?php
+
+include(dirname(__FILE__).'/../../bootstrap/functional.php');
+
+Doctrine_Core ::loadData(sfConfig::get('sf_test_dir').'/fixtures/deal0');
+$browser = new sfTestFunctional(new sfBrowser());
+
+$browser->info('Test perform various commute actions')->
+  info('  Logging In...')->
+  post('/user/login', array( 'auth_info' =>
+                             '{"email":"johndoe","password":"123456"}'))->
+  with('response')->begin()->
+    isStatusCode(200)->
+    isHeader('content-type', 'application/json; charset=utf-8')->
+    matches('/success\":true/')->
+  end()->
+  with('user')->isAuthenticated()->
+  
+  info('  Getting deal Categories...')->
+  get('/deal/categories')->
+  with('response')->begin()->
+    isStatusCode(200)->
+    isHeader('content-type', 'application/json; charset=utf-8')->
+    matches('/success\":true/')->
+    matches('/categories\":\[\]/')->
+  end()->
+  
+  info('  Requesting Deals Around 50. ,30.  ...')->
+  post('/deal/nearby', array('point' => '{"lat":50, "lon":30}'))->
+  with('response')->begin()->
+    isStatusCode(200)->
+    isHeader('content-type', 'application/json; charset=utf-8')->
+    matches('/success\":true/')->
+    debug()->
+  end()->
+  
+  info('  Getting deals around commute #$cid (should be false)')->
+  get('/commute/deals?id='.$cid)->
+  with('response')->begin()->
+    isStatusCode(200)->
+    isHeader('content-type', 'application/json; charset=utf-8')->
+    matches('/success\":true/')->
+    matches('/deals\":\[\]/')->
+  end()->
+  
+  info('  Updating the commute')->
+  post('/commute/update', array('commute' => json_encode($commute)))->
+  with('response')->begin()->
+    isStatusCode(200)->
+    isHeader('content-type', 'application/json; charset=utf-8')->
+    matches('/success\":true/')->
+  end()->
+  
+  info('  Checking commutes list again')->
+  get('/commute')->
+  with('response')->begin()->
+    isStatusCode(200)->
+    isHeader('content-type', 'application/json; charset=utf-8')->
+    matches('/success\":true/')->
+    matches("/id\":\"$cid/")->
+    matches('/name\":\"modified name for test commute\"/')->
+    matches('/suggestions\":\[\]/')->
+  end()->
+  
+  info('  Deleting Commute')->
+  post('/commute/delete/'.$cid, array('id' => $cid))->
+  with('response')->begin()->
+    isStatusCode(200)->
+    isHeader('content-type', 'application/json; charset=utf-8')->
+    matches('/success\":true/')->
+  end()->
+  
+  info('  Checking commutes list once more')->
+  get('/commute')->
+  with('response')->begin()->
+    isStatusCode(200)->
+    isHeader('content-type', 'application/json; charset=utf-8')->
+    matches('/success\":true/')->
+    matches('/commute\":\[\]/')->
+    matches('/suggestions\":\[\]/')->
+  end()
+;

@@ -1,0 +1,59 @@
+<?php
+
+$points = <<<CSV
+
+304523;32;46.43135;30.72965;26532986;primary;26150437;"12.07.2011 6:12 +0000";47;2;230;0
+304524;32;46.43142;30.72967;26532986;primary;26150437;"12.07.2011 6:12 +0000";58;2;230;0
+
+CSV;
+
+$data = str_getcsv(trim($points), "\n");
+foreach($data as &$Row) 
+{
+  $Row = str_getcsv($Row, ";");
+}  
+
+$i = 1;
+?>
+
+Coupon: []
+Average: []
+AverageTile: []
+AverageRoad: []
+AverageCity: []
+AveragePb: []
+AveragePbTotal: []
+PaypalInvoice: []
+
+Point:
+<?php foreach ($data as $point): ?>
+  point_road1_<?php echo $i++; ?>:
+    User: User1
+    lat: <?php echoln($point[2]); ?>
+    lon: <?php echoln($point[3]); ?>
+    road_osm_id: <?php echoln($point[4]); ?>
+    road_type: <?php echoln($point[5]); ?>
+    city_osm_id: <?php echoln($point[6]); ?>
+    received: <?php echoln(date('Y-m-d H:i:s')." +0000"); ?>
+    speed: <?php echoln($point[8]); ?>
+    speed_gps: <?php echoln($point[8]); ?>
+    road_tile: <?php echoln($point[9]); ?>
+    direction: <?php echoln($point[10]); ?>
+    direction_acc: <?php echoln($point[11]); ?>
+<?php endforeach; ?>
+
+
+sfGuardUser:
+  GuardUser1:
+    id: 1
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny@cogniance.com'
+    username: 'bestic'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+
+    
+User:
+  User1:
+    GuardUser: GuardUser1

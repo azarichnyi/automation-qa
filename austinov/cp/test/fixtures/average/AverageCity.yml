@@ -1,0 +1,39 @@
+<?php
+
+$roads = <<<CSV
+
+26532986;26150437;52.375;6.87272696694564;2
+28878127;26150437;48.4;6.03655530911463;1
+28878127;26150437;50;4;2
+
+CSV;
+
+$data = str_getcsv(trim($roads), "\n");
+foreach($data as &$Row) 
+{
+  $Row = str_getcsv($Row, ";");
+}  
+
+$i = 1;
+?>
+
+Coupon: []
+Average: []
+AverageTile: []
+AverageCity: []
+AveragePb: []
+AveragePbTotal: []
+PaypalInvoice: []
+
+AverageRoad:
+<?php foreach ($data as $road): ?>
+  average_road_<?php echo $i++; ?>:
+    road_osm_id: <?php echoln($road[0]); ?>
+    city_osm_id: <?php echoln($road[1]); ?>
+    speed: <?php echoln($road[2]); ?>
+    deviation: <?php echoln($road[3]); ?>
+    direction: <?php echoln($road[4]); ?>
+<?php endforeach; ?>
+
+
+

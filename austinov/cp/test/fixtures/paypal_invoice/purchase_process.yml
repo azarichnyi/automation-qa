@@ -1,0 +1,87 @@
+PaypalInvoice: []
+Coupon: []
+
+UserBusiness:
+  UserBusiness1:
+    GuardUser: GuardUser1
+
+Venue:
+  Venue1:
+    id: 1
+    UserBusiness: UserBusiness1
+    lat: 50.000
+    lon: 30.000
+    
+
+DealCategory:
+  DealCategory1:
+    name: test
+    url: http://test.com
+
+Deal:
+  Deal1:
+    id: 1
+    Venue: Venue1
+    DealCategory: DealCategory1
+    price: 50
+    price_cc: 50
+    total_count: 50
+    booked_count: 49
+    visibility: true
+    state: in_stock
+    need_to_know: avoid null constraint
+    start_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    expiration_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+  Deal2:
+    id: 2
+    Venue: Venue1
+    DealCategory: DealCategory1
+    price: 0
+    price_cc: 50
+    total_count: 50
+    booked_count: 49
+    visibility: true
+    state: in_stock
+    need_to_know: avoid null constraint
+    start_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    expiration_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    
+    
+sfGuardUser:
+  GuardUser1:
+    id: 1
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny@cogniance.com'
+    username: 'bestic'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+  GuardUser2:
+    id: 2
+    first_name: 'Test'
+    last_name: 'Test'
+    email_address: 'test@cogniance.com'
+    username: 'test'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?> 
+  GuardUser3:
+    id: 3
+    first_name: 'Test'
+    last_name: 'Test'
+    email_address: 'test3@cogniance.com'
+    username: 'test3'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>    
+    
+    
+    
+User:
+  User1:
+    GuardUser: GuardUser1
+    cash_amount: 100
+  User2:
+    GuardUser: GuardUser2
+    cash_amount: 100   
+  User3:
+    GuardUser: GuardUser3
+    cash_amount: 100       

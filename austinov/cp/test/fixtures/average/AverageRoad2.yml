@@ -1,0 +1,68 @@
+<?php
+
+$road = <<<CSV
+
+304523;32;46.43135;30.72965;26532986;primary;26150437;"12.07.2011 6:12 +0000";47;2;230;0
+304524;32;46.43142;30.72967;26532986;primary;26150437;"12.07.2011 6:12 +0000";58;2;230;0
+304525;32;46.43229;30.72986;26532986;primary;26150437;"12.07.2011 6:12 +0000";58;4;230;2
+304526;32;46.43263;30.72992;26532986;primary;26150437;"12.07.2011 6:12 +0000";52;5;230;2
+304527;32;46.43401;30.73018;26532986;primary;26150437;"12.07.2011 6:12 +0000";59;8;230;2
+304528;32;46.43565;30.7305;26532986;primary;26150437;"11.07.2011 6:12 +0000";42;11;230;2
+304529;32;46.43601;30.73057;26532986;primary;26150437;"11.07.2011 6:12 +0000";60;12;230;2
+304530;32;46.43714;30.7308;26532986;primary;26150437;"11.07.2011 6:12 +0000";55;14;230;2
+304531;32;46.43731;30.73084;26532986;primary;26150437;"11.07.2011 6:12 +0000";41;15;230;2
+304532;32;46.43955;30.7313;26532986;primary;26150437;"11.07.2011 6:12 +0000";52;19;230;2
+
+CSV;
+
+$data = str_getcsv(trim($road), "\n");
+foreach($data as &$Row) 
+{
+  $Row = str_getcsv($Row, ";");
+}  
+
+$i = 1;
+?>
+
+Coupon: []
+Average: []
+AverageTile: []
+AverageRoad: []
+AverageCity: []
+AveragePb: []
+AveragePbTotal: []
+PaypalInvoice: []
+
+Point:
+<?php foreach ($data as $point): ?>
+  point_road2_<?php echo $i++; ?>:
+    User: User1
+    lat: <?php echoln($point[2]); ?>
+    lon: <?php echoln($point[3]); ?>
+    road_osm_id: <?php echoln($point[4]); ?>
+    road_type: <?php echoln($point[5]); ?>
+    city_osm_id: <?php echoln($point[6]); ?>
+    received: <?php echoln(date('Y-m-d H:i:s')." +0000"); ?>
+    speed: <?php echoln($point[8]); ?>
+    speed_gps: <?php echoln($point[8]); ?>
+    road_tile: <?php echoln($point[9]); ?>
+    direction: <?php echoln($point[10]); ?>
+    direction_acc: <?php echoln($point[11]); ?>
+<?php endforeach; ?>
+
+sfGuardUser:
+  GuardUser1:
+    id: 1
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny@cogniance.com'
+    username: 'bestic'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+
+    
+User:
+  User1:
+    GuardUser: GuardUser1
+
+

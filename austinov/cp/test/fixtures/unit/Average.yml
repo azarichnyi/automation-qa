@@ -1,0 +1,38 @@
+Average:
+  a1:
+    tile: 4588646170632
+    t: 64800
+    direction: 0.5
+    speed: 19.92
+    deviation: 0.28
+    points: 12
+  a2:
+    tile: 4588646629425
+    t: 64800
+    direction: 0.5
+    speed: 10.25
+    deviation: 2.49
+    points: 12
+  a3:
+    tile: 4588646629428
+    t: 64800
+    direction: 0.6
+    speed: 11.17
+    deviation: 2.76
+    points: 12
+  a4:
+    tile: 4588646629429
+    t: 64800
+    direction: 0.5
+    speed: 12.08
+    deviation: 3.04
+    points: 12
+  a5:
+    tile: 4588646629430
+    t: 64800
+    direction: 0.6
+    speed: 13.00
+    deviation: 3.32
+    points: 12                
+    
+    

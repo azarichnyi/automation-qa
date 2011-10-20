@@ -1,0 +1,143 @@
+UserBusiness:
+  UserBusiness1:
+    id: 1
+    name: "test name"
+    site: http://www.testsite.com
+    phone: "test phone"
+    address: "test address"
+    logo: "test logo"
+    contact_name: "test contact name"    
+
+Venue:
+  Venue1:
+    id: 1
+    UserBusiness: UserBusiness1
+    lat: 50.000
+    lon: 30.000
+    address: "test address"
+    name: "test venue name"
+    phone: "test phone"
+    working_hours: "test working hours"
+    visibility: true
+    state: "test state"
+    zip: 12345
+    city: "test city"    
+    
+
+DealCategory:
+  DealCategory1:
+    name: "test name"
+    url: http://test.com
+
+Deal:
+  Deal1:
+    id: 1
+    Venue: Venue1
+    DealCategory: DealCategory1
+    name: "test name"
+    description: "test description"
+    need_to_know: "test time frame"
+    promotion_type: "test promotion type"    
+    price: 50
+    price_cc: 50
+    total_count: 50
+    booked_count: 20
+    visibility: true
+    state: in_stock
+    the_geom: 0101000020E61000000000000000003E400000000000004940
+    start_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    expiration_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+  Deal2:
+    id: 2
+    Venue: Venue1
+    DealCategory: DealCategory1
+    name: "test name"
+    description: "test description"
+    need_to_know: "test time frame"
+    promotion_type: "test promotion type"    
+    price: 0
+    price_cc: 50
+    total_count: 50
+    booked_count: 20
+    visibility: true
+    state: in_stock
+    the_geom: 0101000020E61000000000000000003E400000000000004940
+    start_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    expiration_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>    
+    
+    
+DealToCommute:
+  DealToCommute1:
+    deal_id: 1
+    commute_id: 1    
+    
+Coupon:
+  Coupon1:
+    id: 1
+    Deal: Deal1
+    user_id: 1
+    status: expired
+    visibility: true
+    purchase_price: 40
+    purchase_price_cc: 50
+    purchase_type: paypal_cc
+  Coupon2:
+    id: 2
+    Deal: Deal1
+    user_id: 1
+    code: 1234567890
+    status: unlocked
+    visibility: true
+    purchase_price: 50
+    purchase_price_cc: 0
+    purchase_type: paypal   
+  Coupon3:
+    id: 3
+    Deal: Deal1
+    user_id: 1
+    code: 1234567890
+    status: unlocked
+    visibility: true
+    purchase_price: 0
+    purchase_price_cc: 50
+    purchase_type: cc       
+    
+Commute:
+  commute0:
+    id: 1
+    user_id: 1
+    start_point_id: 1
+    finish_point_id: 2
+    via_points: ''
+    name: "Борщаговская ул./Борщагівська вул."
+    ne_point: 3
+    sw_point: 4
+    polyline: "oo~rHww|xDeDwDc@QqGmAmAzWItGZdp@?bD[jEP|PU~A_@H[GUa@Kw@CoCnUe@rDE~@FhJ`BfTzFrHzBjBx@pg@tNxAHjBE|Bq@`AtFBb@[n@]BYO}@kGyOa`AKqA?}AjD_o@DyHOiDaAuK_G{g@s@eISaEAgEJoENoAnAqHtBoPj@e@wOmE_NiEAsAcEy]}Bz@"
+    steps: ''
+    the_geom: "0102000020E610000036000000D847A7AE7C763E40D027F224E93A49406631B1F9B8763E4057957D57043B4940E63FA4DFBE763E40D7A3703D0A3B4940BB7EC16ED8763E40DE3CD521373B49402FA86F99D3753E4048DC63E9433B4940931D1B8178753E40FA0AD28C453B4940FA7E6ABC74733E4008556AF6403B4940335019FF3E733E4008556AF6403B4940DEAB5626FC723E40FA0AD28C453B49402788BA0F40723E40BA83D899423B4940D23AAA9A20723E4041B79734463B49406EDDCD531D723E407A19C5724B3B49408A8EE4F21F723E406CCF2C09503B494043FF04172B723E40F302ECA3533B49400AD7A3703D723E40C8073D9B553B49400A4B3CA06C723E400FB40243563B49405114E81379723E401092054CE03A49402619390B7B723E40904946CEC23A49400A68226C78723E401F85EB51B83A49406E6E4C4F58723E40FC1D8A027D3A49406EA301BC05723E40C3B645990D3A494036EA211ADD713E4060E5D022DB3949402766BD18CA713E40E0B9F770C9394940707CED9925713E40BED9E6C6F43849400C1F115322713E407E350708E6384940E223624A24713E40FF092E56D4384940D3F6AFAC34713E403F575BB1BF384940A930B610E4703E40A9BC1DE1B4384940A913D044D8703E4062105839B4384940FFEC478AC8703E4054C6BFCFB83849407094BC3AC7703E4069520ABABD384940A9F6E978CC703E4038328FFCC1384940E223624A24713E4086200725CC38494007B13385CE733E40E223624A243949406B48DC63E9733E40B728B3412639494079E9263108743E40B728B34126394940CBBE2B82FF753E40C5387F130A3949406666666666763E405BB6D61709394940029A081B9E763E407767EDB60B3949406536C82423773E400C022B87163949400D54C6BFCF783E40D3139678403949405305A3923A793E406FD39FFD48394940444C89247A793E40D3307C444C3949400B98C0ADBB793E40F7065F984C394940EE940ED6FF793E4021020EA14A3949400A80F10C1A7A3E400551F701483949408A7615527E7A3E4077DB85E63A39494050E449D2357B3E4045813E912739494097ADF545427B3E40371AC05B2039494033FE7DC6857B3E406F47382D7839494040F67AF7C77B3E40C408E1D1C6394940EB39E97DE37B3E40E8DEC325C7394940DAFE9595267D3E4084D89942E739494085CE6BEC127D3E40448B6CE7FB394940"
+    
+PointCommute:
+  pointStart:
+    Commute:  commute0
+    description: "Start point"
+    lat: 50
+    lon: 30
+    is_map_layout: 0
+  pointFinish:
+    Commute:  commute0
+    description: "Finish point"
+    lat: 50
+    lon: 30
+    is_map_layout: 0
+  pointNE:
+    Commute:  commute0
+    description: "North-east point"
+    lat: 50
+    lon: 30
+    is_map_layout: 1
+  pointSW:
+    Commute:  commute0
+    description: "South-west point"
+    lat: 50
+    lon: 30
+    is_map_layout: 1    

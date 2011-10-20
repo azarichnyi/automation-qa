@@ -1,0 +1,12 @@
+point:
+  point0:
+    user_id: 1
+    lat: 50.41478
+    lon: 30.52000
+    road_osm_id: 86380111
+    city_osm_id: 26150422
+    road_tile: 3
+    road_type: primary
+    speed: 35
+    speed_gps: 36
+    received: 2011-07-01 0:00:07 +0000

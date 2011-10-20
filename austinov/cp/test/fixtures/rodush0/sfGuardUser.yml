@@ -1,0 +1,10 @@
+sfGuardUser:
+  guarduser:
+    id: 1
+    first_name: John
+    last_name: Doe
+    email_address: john@doe.com
+    username: johndoe
+    algorithm: md5
+    salt: cbeba1a2505aaba844a9bdce346a8a0b
+    password: 123456

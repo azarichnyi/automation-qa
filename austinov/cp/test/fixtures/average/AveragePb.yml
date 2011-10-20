@@ -1,0 +1,269 @@
+Coupon: []
+Average: []
+AverageTile: []
+AverageRoad: []
+AverageCity: []
+AveragePb: []
+AveragePbTotal: []
+PaypalInvoice: []
+
+sfGuardUser:
+  GuardUser1:
+    id: 1
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny@cogniance.com'
+    username: 'bestic'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+  GuardUser2:
+    id: 2
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny1@cogniance.com'
+    username: 'bestic1'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+  GuardUser3:
+    id: 3
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny2@cogniance.com'
+    username: 'bestic2'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+  GuardUser4:
+    id: 4
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny3@cogniance.com'
+    username: 'bestic3'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+
+
+
+User:
+  User1: 
+    GuardUser: GuardUser1   
+    token: testing1
+    painbucks: 0      
+    painbucks_dd: 0     
+    painbucks_dc: 0     
+    painbucks_cc: 0     
+    painbucks_contrib: 0      
+    painbucks_avg_coef: 1.0     
+    cash_amount: 0      
+  User2: 
+    GuardUser: GuardUser2   
+    token: testing2
+    painbucks: 0      
+    painbucks_dd: 0     
+    painbucks_dc: 0     
+    painbucks_cc: 0     
+    painbucks_contrib: 0      
+    painbucks_avg_coef: 1.0     
+    cash_amount: 0      
+  User3: 
+    GuardUser: GuardUser3 
+    token: testing3
+    painbucks: 0      
+    painbucks_dd: 0     
+    painbucks_dc: 0     
+    painbucks_cc: 0     
+    painbucks_contrib: 0      
+    painbucks_avg_coef: 1.0     
+    cash_amount: 0      
+  User4: 
+    GuardUser: GuardUser4   
+    token: testing4
+    painbucks: 0      
+    painbucks_dd: 0     
+    painbucks_dc: 0     
+    painbucks_cc: 0     
+    painbucks_contrib: 0      
+    painbucks_avg_coef: 1.0     
+    cash_amount: 0      
+    
+    
+PainBucksHistory:
+  user1_1: 
+    User: User1
+    painbucks_dd: 11.45
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/20/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user1_2: 
+    User: User1
+    painbucks_dd: 23.11
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/21/2012 13:24:52 +0000 
+    painbucks_contrib: 0
+  user1_3: 
+    User: User1
+    painbucks_dd: 12.5
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/22/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user1_4: 
+    User: User1
+    painbucks_dd: 45.5
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/23/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user1_5: 
+    User: User1
+    painbucks_dd: 14.5
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/24/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user2_1: 
+    User: User2
+    painbucks_dd: 45.2
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/20/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user2_2: 
+    User: User2
+    painbucks_dd: 33.2
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/21/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user2_3: 
+    User: User2
+    painbucks_dd: 12.5
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/22/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user2_4: 
+    User: User2
+    painbucks_dd: 11.4
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/23/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user2_5: 
+    User: User2
+    painbucks_dd: 22.54
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/24/2012 13:24:52 +0000 
+    painbucks_contrib: 0
+  user3_1: 
+    User: User3
+    painbucks_dd: 33.6
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/20/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user3_2: 
+    User: User3
+    painbucks_dd: 53.4
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/21/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user3_3: 
+    User: User3
+    painbucks_dd: 2.4
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/22/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user3_4: 
+    User: User3
+    painbucks_dd: 11.7
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/23/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user3_5: 
+    User: User3
+    painbucks_dd: 17.5
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/24/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user4_1:
+    User: User4
+    painbucks_dd: 2
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/20/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user4_2: 
+    User: User4
+    painbucks_dd: 1.5
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/21/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user4_3: 
+    User: User4
+    painbucks_dd: 1.4
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/22/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user4_4: 
+    User: User4
+    painbucks_dd: 2
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/23/2012 13:24:52 +0000
+    painbucks_contrib: 0
+  user4_5: 
+    User: User4
+    painbucks_dd: 2.35
+    painbucks_dc: 0
+    painbucks_cc: 0
+    painbucks_avg_coef: 1.0
+    info: testing
+    received: 7/24/2012 13:24:52 +0000
+    painbucks_contrib: 0

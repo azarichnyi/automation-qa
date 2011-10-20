@@ -1,0 +1,47 @@
+Coupon: []
+PaypalInvoice: []
+
+UserBusiness:
+  UserBusiness1:
+    GuardUser: GuardUser1
+
+Venue:
+  Venue1:
+    id: 1
+    UserBusiness: UserBusiness1
+    lat: 50.000
+    lon: 30.000
+    
+
+DealCategory:
+  DealCategory1:
+    name: test
+    url: http://test.com
+
+Deal:
+  Deal1:
+    id: 1
+    Venue: Venue1
+    DealCategory: DealCategory1
+    price: 50
+    price_cc: 50
+    need_to_know: test
+    state: in_stock
+    start_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    expiration_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+
+sfGuardUser:
+  GuardUser1:
+    id: 1
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny@cogniance.com'
+    username: 'bestic'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    
+User:
+  User1:
+    GuardUser: GuardUser1
+
+

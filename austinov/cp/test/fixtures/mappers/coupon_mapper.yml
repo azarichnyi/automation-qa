@@ -1,0 +1,66 @@
+PaypalInvoice: []
+
+Coupon:
+  Coupon1:
+    id: 1
+    Deal: Deal1
+    User: User1
+    status: unlocked
+    code: 1234567890
+    visibility: true
+    purchase_price: 40
+    purchase_price_cc: 50
+    purchase_type: paypal
+
+UserBusiness:
+  UserBusiness1:
+    GuardUser: GuardUser1
+
+Venue:
+  Venue1:
+    id: 1
+    UserBusiness: UserBusiness1
+    lat: 50.000
+    lon: 30.000
+    
+
+DealCategory:
+  DealCategory1:
+    name: test
+    url: http://test.com
+
+Deal:
+  Deal1:
+    id: 1
+    Venue: Venue1
+    DealCategory: DealCategory1
+    price: 10
+    price_cc: 50
+    state: in_stock
+    need_to_know: avoid null constraint
+    start_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    expiration_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+  Deal2:
+    id: 2
+    Venue: Venue1
+    DealCategory: DealCategory1
+    price: 0
+    price_cc: 50
+    state: in_stock
+    need_to_know: avoid null constraint
+    start_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    expiration_date: <?php echoln("'".date('Y-m-d H:i:s')."'");?>    
+
+sfGuardUser:
+  GuardUser1:
+    id: 1
+    first_name: 'Alexander'
+    last_name: 'Bestcenny'
+    email_address: 'abestcenny@cogniance.com'
+    username: 'bestic'
+    created_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    updated_at: <?php echoln("'".date('Y-m-d H:i:s')."'");?>
+    
+User:
+  User1:
+    GuardUser: GuardUser1
